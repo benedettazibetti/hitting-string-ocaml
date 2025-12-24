@@ -35,7 +35,7 @@ let distHamm s1 s2 =
 					else (dist+1)
 		in aux (i+1) dist'
 in aux 0 0;;
-'''
+```
 
 Il codice legge in input due stringhe s1 e s2. Per prima cosa verifica che abbiano stessa lunghezza (in caso contrario produce un’eccezione definita precedentemente LunghezzaDiversa). 
 Se s1 e s2 hanno la stessa lunghezza, tramite ricorsione, studia i singoli caratteri delle stringhe. 
@@ -44,6 +44,8 @@ Il caso terminale avviene quando i è pari alla lunghezza della stringa s1 (che 
 L’output del codice è dist, che determina la distanza di Hamming tra le due stringhe.
 
 OSS: Per il nostro codice di ricerca verificare, all’interno della funzione distHamm, che le due stringhe abbiano la stessa lunghezza è inutile (è un controllo che avviene già nel corpo del problema in searchbf) ma è importante per garantire l’utilizzo di questa funzione in ogni caso possibile.
+
+---
 
 ### 2. Funzione di valutazione
 Tramite la distranza di Hamming si può studiare la funzione di valutazione che verrà poi utilizzata all’interno della ricerca vera e propria del problema come funzione euristica per la ricerca best first:
